@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de [Tu Nombre] - Desarrollador/a">
+    <title>Ramiro Dion De Biase | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome para iconos (opcional pero recomendado) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header fijo con navegación -->
+    <header>
+        <nav>
+            <a href="#" class="logo">Ramiro Dion De Biase</a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="inicio">
+            <!-- Carrusel de fondo -->
+            <div class="hero-carousel">
+                <div class="carousel-slide active" style="background-image: url('assets/images/fondo1.png');"></div>
+                <div class="carousel-slide" style="background-image: url('assets/images/fondo2.png');"></div>
+                <div class="carousel-slide" style="background-image: url('assets/images/fondo1.png');"></div>
+            </div>
+
+            <!-- Overlay oscuro para que el texto sea legible -->
+            <div class="hero-overlay"></div>
+
+            <!-- Contenido del hero (igual que antes) -->
+            <div class="hero-content">
+                <h1>Hola, soy <span>Ramiro</span></h1>
+                <p class="subtitle">Desarrollador</p>
+                <p>Construyo cosas para la web</p>
+                <div class="hero-buttons">
+                    <a href="proyectos.html" class="btn">Ver Proyectos</a>
+                    <a href="#contacto" class="btn btn-outline">Contáctame</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MÍ -->
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <div class="sobre-mi-content">
+                <img src="assets/images/foto_perfil.png" alt="Foto de perfil" class="perfil-img">
+                <div class="sobre-mi-texto">
+                    <p>Soy desarrollador de software, vivo en Villa Gesell y actualmente estoy cursando el último año de
+                        la Licenciatura en Sistemas. Me considero una persona muy responsable y me apasiona dar vida a
+                        ideas a través del código.
+
+                        Tengo un perfil técnico amplio: aunque mi foco actual son las aplicaciones móviles (Android),
+                        tengo experiencia completa en desarrollo de páginas web, aplicaciones web, creación de APIs,
+                        gestión de servidores, redes y bases de datos (relacionales y NoSQL).
+
+                        Estoy con disponibilidad inmediata para recibir propuestas y empezar a trabajar. Si necesitás
+                        una página, una app o soporte en tu infraestructura, ¡estoy listo para ayudarte! Ponete en
+                        contacto conmigo y lo charlamos.</p>
+                    <h3>Tecnologías que uso</h3>
+                    <ul class="stack-list">
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>React</li>
+                        <li>Git & GitHub</li>
+                        <li>Linux</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>TypeScript</li>
+                        <li>Kotlin</li>
+                        <li>C</li>
+                        <li>Rust</li>
+                        <li>MongoDB</li>
+                        <li>Cassandra</li>
+                        <li>Supabase</li>
+                        <li>SQL</li>
+                    </ul>
+                    <a href="assets/cv/tu-cv.pdf" download class="btn">Descargar CV</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+
+            <div class="contacto-links">
+                <a href="mailto:ramirodebiase@hotmail.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://github.com/Ramadion" target="_blank" rel="noopener"><i class="fab fa-github"></i>
+                    GitHub</a>
+                <a href="https://www.linkedin.com/in/ramiro-de-biase-b14a0729a/" target="_blank" rel="noopener"><i
+                        class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Ramiro Dion De Biase. Hecho con ❤️ y código.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

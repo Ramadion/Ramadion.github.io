@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyectos de Ramiro Dion De Biase">
+    <title>Ramiro Dion De Biase</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header (mismo que en index para navegación consistente) -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Ramiro Dion De Biase</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html" class="activo">Proyectos</a></li>
+                <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN PROYECTOS (única en esta página) -->
+        <section id="proyectos-page">
+            <h1>Mis Proyectos</h1>
+            <p class="proyectos-intro">Una colección breve de algunas de las cosas que hice(relevantes nada de paginas
+                estaticas).</p>
+
+            <div class="proyectos-grid">
+
+
+                <!-- ===== PROYECTO 1 ===== -->
+                <article class="proyecto-card">
+                    <div class="proyecto-video" id="contenedor-video-1">
+                        <video id="video-proyecto-1" poster="assets/images/minikanban.png" loop>
+                            <source src="assets/videos/minikanban.webm" type="video/webm">
+                            Tu navegador no soporta el video.
+                        </video>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Mini KanBan</h3>
+
+                        <!-- Descripción corta (siempre visible) -->
+                        <p class="proyecto-descripcion-corta">
+                            Aplicacion web con formato tablero KANBAN para organizacion de tareas
+                        </p>
+
+                        <!-- Descripción larga (oculta hasta hacer clic) -->
+                        <div class="proyecto-descripcion-completa">
+                            <p>Una plataforma ágil diseñada para optimizar la gestión de equipos, tareas y prioridades
+                                en tiempo real. Inspirada en la simplicidad de Trello, esta herramienta eleva la
+                                experiencia Kanban tradicional incorporando mejoras clave como el seguimiento avanzado
+                                de plazos (deadlines), flujos de trabajo personalizados y un sistema inteligente de
+                                notificaciones para mantener a tu equipo siempre alineado. </p>
+
+                        </div>
+
+                        <!-- Botón Leer más -->
+                        <button class="btn-leer-mas" onclick="toggleDescripcion(this)">
+                            Leer más <i class="fas fa-chevron-down"></i>
+                        </button>
+
+                        <div class="tags">
+                            <span>TypeScript</span><span>React</span><span>Node</span>
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="#"
+                                onclick="abrirDemoFullscreen('contenedor-video-1', 'video-proyecto-1'); return false;"
+                                class="link-demo">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                            <a href="https://github.com/Ramadion/Mini-Frontend" target="_blank" rel="noopener"
+                                class="link-repo">
+                                <i class="fab fa-github"></i> Repo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ===== PROYECTO 2 ===== -->
+                <article class="proyecto-card">
+                    <div class="proyecto-video" id="contenedor-video-2">
+                        <video id="video-proyecto-2" poster="assets/images/imagen_APP.png" loop>
+                            <source src="assets/videos/video_demostracion_APP.mp4" type="video/webm">
+                            Tu navegador no soporta el video.
+                        </video>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Gymera</h3>
+
+                        <!-- Descripción corta (siempre visible) -->
+                        <p class="proyecto-descripcion-corta">
+                            Aplicacion nativa de android (en desarrollo)
+                        </p>
+
+                        <!-- Descripción larga (oculta hasta hacer clic) -->
+                        <div class="proyecto-descripcion-completa">
+                            <p>
+                                Gymera es una aplicacion movil nativa para Android que combina Inteligencia Artificial
+                                Generativa (Google Gemini) con una base de datos de ejercicios de dominio publico
+                                (free-exercise-db) para ofrecer al usuario rutinas de entrenamiento completamente
+                                personalizadas. El usuario responde una serie de preguntas sobre sus caracteristicas
+                                fisicas y objetivos, y la IA genera un plan de entrenamiento semanal adaptado a su
+                                perfil. Cada ejercicio incluye nombre en espanol, grupo muscular, imagen demostrativa
+                                animada y serie/repeticion detallada. La rutina persiste offline via Room y se
+                                sincroniza con Firebase Firestore para recuperacion en cualquier dispositivo.
+                            </p>
+                        </div>
+
+                        <!-- Botón Leer más -->
+                        <button class="btn-leer-mas" onclick="toggleDescripcion(this)">
+                            Leer más <i class="fas fa-chevron-down"></i>
+                        </button>
+
+                        <div class="tags">
+                            <span>Kotlin</span><span>MVVM</span><span>Android</span>
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="#"
+                                onclick="abrirDemoFullscreen('contenedor-video-2', 'video-proyecto-2'); return false;"
+                                class="link-demo">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                            <a href="https://github.com/Ramadion/Gymera" target="_blank" rel="noopener"
+                                class="link-repo">
+                                <i class="fab fa-github"></i> Repo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ===== PROYECTO 3  ===== -->
+                <article class="proyecto-card">
+                    <div class="proyecto-video" id="contenedor-video-3">
+                        <video id="video-proyecto-3" poster="assets/images/proyecto1-thumb.jpg" loop>
+                            <source src="assets/videos/demo-proyecto1.webm" type="video/webm">
+                            Tu navegador no soporta el video.
+                        </video>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Nombre del Proyecto</h3>
+
+                        <!-- Descripción corta (siempre visible) -->
+                        <p class="proyecto-descripcion-corta">
+                            Descripción breve que se ve siempre. Un par de líneas nada más.
+                        </p>
+
+                        <!-- Descripción larga (oculta hasta hacer clic) -->
+                        <div class="proyecto-descripcion-completa">
+                            <p>
+                                Acá va todo el texto largo que quieras. Podés contar todos los detalles
+                                del proyecto: qué problema resuelve, cómo lo construiste, qué tecnologías
+                                usaste, los desafíos que enfrentaste, lo que aprendiste, etc.
+                            </p>
+                            <p>
+                                Incluso podés agregar varios párrafos sin problema.
+                            </p>
+                        </div>
+
+                        <!-- Botón Leer más -->
+                        <button class="btn-leer-mas" onclick="toggleDescripcion(this)">
+                            Leer más <i class="fas fa-chevron-down"></i>
+                        </button>
+
+                        <div class="tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="#"
+                                onclick="abrirDemoFullscreen('contenedor-video-3', 'video-proyecto-3'); return false;"
+                                class="link-demo">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                            <a href="https://github.com/tuusuario/tu-repo" target="_blank" rel="noopener"
+                                class="link-repo">
+                                <i class="fab fa-github"></i> Repo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Botón volver al inicio -->
+            <div class="volver-inicio">
+                <a href="index.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i> Volver al Inicio
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 [Tu Nombre]. Hecho con ❤️ y código.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
