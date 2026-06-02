@@ -540,6 +540,11 @@ nav {
     transform: translateY(-3px);
 }
 
+.contacto-links a[href*="wa.me"]:hover {
+    background: #25D366; /* Verde WhatsApp */
+    border-color: #25D366;
+}
+
 .contacto-links i {
     margin-right: 0.5rem;
 }
