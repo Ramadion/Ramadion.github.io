@@ -27,6 +27,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -860,22 +861,27 @@ footer {
   .hamburger { display: flex; }
 
   .nav-links {
+    --nav-w: min(75vw, 320px);
     position: fixed;
     top: 0;
-    right: -100%;
-    width: min(75vw, 320px);
+    left: 100%;
+    width: var(--nav-w);
     height: 100vh;
     flex-direction: column;
     background: rgba(10, 10, 15, 0.98);
     backdrop-filter: blur(10px);
     padding: 5rem 2rem 2rem;
     gap: 1.5rem;
-    transition: right var(--transition);
+    transition: left var(--transition);
     z-index: 100;
     border-left: 1px solid var(--color-border);
+    visibility: hidden;
   }
 
-  .nav-links.nav-open { right: 0; }
+  .nav-links.nav-open {
+    left: calc(100% - var(--nav-w));
+    visibility: visible;
+  }
 
   .nav-links a { font-size: 1.1rem; }
 
