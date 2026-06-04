@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Proyectos de Ramiro Dion De Biase">
-    <title>Ramiro Dion De Biase</title>
+    <meta name="description" content="Proyectos de Ramiro Dion De Biase — Mini KanBan, Gymera, Restaurant Manager y más.">
+    <meta name="keywords" content="desarrollador, proyectos, portfolio, Android, Kotlin, React">
+    <meta name="author" content="Ramiro Dion De Biase">
+    <meta property="og:title" content="Ramiro Dion De Biase | Proyectos">
+    <meta property="og:description" content="Portfolio de proyectos de desarrollo de software.">
+    <meta property="og:type" content="website">
+    <title>Ramiro Dion De Biase | Proyectos</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -15,6 +21,9 @@
     <header>
         <nav>
             <a href="index.html" class="logo">Ramiro Dion De Biase</a>
+            <button class="hamburger" aria-label="Menú de navegación" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="proyectos.html" class="activo">Proyectos</a></li>
@@ -33,9 +42,8 @@
 
             <div class="proyectos-grid">
 
-
                 <!-- ===== PROYECTO 1 ===== -->
-                <article class="proyecto-card">
+                <article class="proyecto-card animar-entrada">
                     <div class="proyecto-video" id="contenedor-video-1">
                         <video id="video-proyecto-1" poster="assets/images/minikanban.png" loop>
                             <source src="assets/videos/minikanban.webm" type="video/webm">
@@ -61,7 +69,7 @@
                         </div>
 
                         <!-- Botón Leer más -->
-                        <button class="btn-leer-mas" onclick="toggleDescripcion(this)">
+                        <button class="btn-leer-mas" onclick="toggleDescripcion(event, this)">
                             Leer más <i class="fas fa-chevron-down"></i>
                         </button>
 
@@ -83,10 +91,10 @@
                 </article>
 
                 <!-- ===== PROYECTO 2 ===== -->
-                <article class="proyecto-card">
+                <article class="proyecto-card animar-entrada">
                     <div class="proyecto-video" id="contenedor-video-2">
                         <video id="video-proyecto-2" poster="assets/images/imagen_APP.png" loop>
-                            <source src="assets/videos/video_demostracion_APP.mp4" type="video/webm">
+                            <source src="assets/videos/video_demostracion_APP.mp4" type="video/mp4">
                             Tu navegador no soporta el video.
                         </video>
                     </div>
@@ -113,7 +121,7 @@
                         </div>
 
                         <!-- Botón Leer más -->
-                        <button class="btn-leer-mas" onclick="toggleDescripcion(this)">
+                        <button class="btn-leer-mas" onclick="toggleDescripcion(event, this)">
                             Leer más <i class="fas fa-chevron-down"></i>
                         </button>
 
@@ -135,7 +143,7 @@
                 </article>
 
                 <!-- ===== PROYECTO 3  ===== -->
-                <article class="proyecto-card">
+                <article class="proyecto-card animar-entrada">
                     <div class="proyecto-video" id="contenedor-video-3">
                         <video id="video-proyecto-3" poster="assets/images/restaurant-manager.png" loop>
                             <source src="assets/videos/Restaurant-manager.webm" type="video/webm">
@@ -159,7 +167,7 @@
                         </div>
 
                         <!-- Botón Leer más -->
-                        <button class="btn-leer-mas" onclick="toggleDescripcion(this)">
+                        <button class="btn-leer-mas" onclick="toggleDescripcion(event, this)">
                             Leer más <i class="fas fa-chevron-down"></i>
                         </button>
 
@@ -191,7 +199,7 @@
     </main>
 
     <footer>
-        <p>© 2024 [Tu Nombre]. Hecho con ❤️ y código.</p>
+        <p>© 2026 Ramiro Dion De Biase. Hecho con ❤️</p>
     </footer>
 
     <script src="js/main.js"></script>

@@ -4,18 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de [Tu Nombre] - Desarrollador/a">
+    <meta name="description" content="Portfolio de Ramiro Dion De Biase — Desarrollador de software especializado en apps Android, web y APIs.">
+    <meta name="keywords" content="desarrollador, software, Android, Kotlin, React, portfolio, Villa Gesell">
+    <meta name="author" content="Ramiro Dion De Biase">
+    <meta property="og:title" content="Ramiro Dion De Biase | Portfolio">
+    <meta property="og:description" content="Desarrollador de software — Apps Android, web y APIs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ramadion.github.io">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Ramiro Dion De Biase | Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Font Awesome para iconos (opcional pero recomendado) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-    <!-- Header fijo con navegación -->
     <header>
         <nav>
             <a href="#" class="logo">Ramiro Dion De Biase</a>
+            <button class="hamburger" aria-label="Menú de navegación" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="proyectos.html">Proyectos</a></li>
@@ -28,11 +37,9 @@
     <main>
         <!-- HERO -->
         <section id="inicio">
-    <!-- Carrusel de fondo -->
     <div class="hero-carousel">
         <div class="carousel-slide active" style="background-image: url('assets/images/fondo1.png');"></div>
         <div class="carousel-slide" style="background-image: url('assets/images/fondo2.png');"></div>
-        <div class="carousel-slide" style="background-image: url('assets/images/fondo1.png');"></div>
     </div>
     
     <!-- Overlay oscuro -->
@@ -40,8 +47,9 @@
     
     <!-- Degradado inferior para transición suave -->
     <div class="hero-fade-bottom"></div>
+
+    <canvas id="particles-canvas"></canvas>
     
-    <!-- Contenido -->
     <div class="hero-content">
         <h1>Hola, soy <span>Ramiro</span></h1>
         <p class="subtitle">Desarrollador</p>
@@ -54,7 +62,7 @@
 </section>
 
         <!-- SOBRE MÍ -->
-        <section id="sobre-mi">
+        <section id="sobre-mi" class="animar-entrada">
             <h2>Sobre mí</h2>
             <div class="sobre-mi-content">
                 <img src="assets/images/foto_perfil.png" alt="Foto de perfil" class="perfil-img">
@@ -88,14 +96,143 @@
                         <li>Supabase</li>
                         <li>SQL</li>
                     </ul>
-                    <a href="assets/cv/tu-cv.pdf" download class="btn">Descargar CV</a>
+                    <a href="#" class="btn" id="descargar-cv">Descargar CV</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCIA -->
+        <section id="experiencia" class="animar-entrada">
+            <h2>Experiencia</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Desarrollador Freelance</h3>
+                    <span class="timeline-date">2023 — Actualidad</span>
+                    <p>Desarrollo de aplicaciones web, móviles y APIs por encargo. Proyectos destacados incluyen un
+                        sistema de gestión restaurantera completo y un tablero Kanban colaborativo.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Proyectos Académicos</h3>
+                    <span class="timeline-date">2021 — 2025</span>
+                    <p>Durante la carrera universitaria desarrollé múltiples proyectos integradores abarcando desarrollo
+                        móvil Android, aplicaciones web full-stack, bases de datos distribuidas y administración de
+                        servidores Linux.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCACIÓN -->
+        <section id="educacion" class="animar-entrada">
+            <h2>Educación</h2>
+            <div class="educacion-grid">
+                <div class="educacion-card">
+                    <h3>Licenciatura en Sistemas</h3>
+                    <p class="edu-institucion">UADE</p>
+                    <p class="edu-fecha">2022 — Actualidad (último año)</p>
+                </div>
+                <div class="educacion-card">
+                    <h3>Especialización en Java</h3>
+                    <p class="edu-institucion">Curso anual de formación intensiva</p>
+                    <p class="edu-fecha">1 año</p>
+                </div>
+                <div class="educacion-card">
+                    <h3>Curso de Ciberseguridad</h3>
+                    <p class="edu-institucion">Formación complementaria</p>
+                    <p class="edu-fecha">Completado</p>
+                </div>
+                <div class="educacion-card">
+                    <h3>Escuela Técnica</h3>
+                    <p class="edu-institucion">Educación secundaria</p>
+                    <p class="edu-fecha">Egresado 2016</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="animar-entrada">
+            <h2>Skills</h2>
+
+            <div class="skills-categoria">
+                <h3>Frontend</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-header"><span>HTML5 & CSS3</span><span>90%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" style="--pct: 90%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>JavaScript (ES6+)</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" style="--pct: 85%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>React</span><span>75%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" style="--pct: 75%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>TypeScript</span><span>75%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" style="--pct: 75%;"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-categoria">
+                <h3>Backend & Bases de datos</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-header"><span>Node.js</span><span>75%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" style="--pct: 75%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>SQL</span><span>80%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" style="--pct: 80%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>MongoDB</span><span>70%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" style="--pct: 70%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>Cassandra</span><span>60%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" style="--pct: 60%;"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-categoria">
+                <h3>Mobile & Otros</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-header"><span>Kotlin / Android</span><span>80%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" style="--pct: 80%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>Python</span><span>70%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" style="--pct: 70%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>Java</span><span>70%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" style="--pct: 70%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>Linux / Git</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" style="--pct: 85%;"></div></div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- CONTACTO -->
-        <section id="contacto">
+        <section id="contacto" class="animar-entrada">
             <h2>Contacto</h2>
+            <p>¿Tenés un proyecto en mente? ¡Hablemos!</p>
+
+            <div class="contacto-wrapper">
+            <form class="contacto-form" action="https://formspree.io/f/xyzebyyb" method="POST">
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu email" required>
+                <input type="text" name="asunto" placeholder="Asunto">
+                <textarea name="mensaje" placeholder="Tu mensaje..." required></textarea>
+                <button type="submit" class="btn">Enviar mensaje</button>
+                <div class="form-feedback"></div>
+            </form>
 
             <div class="contacto-links">
                 <a href="mailto:ramirodebiase@hotmail.com"><i class="fas fa-envelope"></i> Email</a>
@@ -108,11 +245,12 @@
                 <a href="https://www.linkedin.com/in/ramiro-de-biase-b14a0729a/" target="_blank" rel="noopener"><i
                         class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 Ramiro Dion De Biase. Hecho con ❤️ y código.</p>
+        <p>© 2026 Ramiro Dion De Biase. Hecho con ❤️ </p>
     </footer>
 
     <script src="js/main.js"></script>
