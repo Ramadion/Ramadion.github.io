@@ -247,16 +247,46 @@ window.abrirDemoFullscreen = (contenedorId, videoId) => {
   document.addEventListener('webkitfullscreenchange', salir);
 };
 
-/* ---- Toggle descripción proyectos ---- */
+/* ---- Toggle descripción proyectos (modal) ---- */
+const cerrarModal = () => {
+  const overlay = document.querySelector('.modal-overlay');
+  if (!overlay) return;
+  overlay.classList.remove('abierto');
+  document.body.style.overflow = '';
+};
+
 window.toggleDescripcion = (e, boton) => {
+  e?.preventDefault();
   e?.stopPropagation();
+
   const tarjeta = boton.closest('.proyecto-card');
   const desc = tarjeta?.querySelector('.proyecto-descripcion-completa');
   if (!desc) return;
 
-  desc.classList.toggle('activa');
-  boton.classList.toggle('abierto');
-  boton.innerHTML = desc.classList.contains('activa')
-    ? 'Leer menos <i class="fas fa-chevron-down"></i>'
-    : 'Leer más <i class="fas fa-chevron-down"></i>';
+  const titulo = tarjeta.querySelector('h3')?.textContent || 'Descripción';
+
+  let overlay = document.querySelector('.modal-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.innerHTML = `
+      <div class="modal-contenido" role="dialog" aria-modal="true">
+        <button class="modal-cerrar" aria-label="Cerrar">&times;</button>
+        <h3></h3>
+        <div class="modal-descripcion"></div>
+      </div>`;
+    overlay.addEventListener('click', (ev) => {
+      if (ev.target === overlay) cerrarModal();
+    });
+    document.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Escape') cerrarModal();
+    });
+    overlay.querySelector('.modal-cerrar').addEventListener('click', cerrarModal);
+    document.body.appendChild(overlay);
+  }
+
+  overlay.querySelector('h3').textContent = titulo;
+  overlay.querySelector('.modal-descripcion').innerHTML = desc.innerHTML;
+  overlay.classList.add('abierto');
+  document.body.style.overflow = 'hidden';
 };
