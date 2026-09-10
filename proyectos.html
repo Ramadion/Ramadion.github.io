@@ -14,6 +14,9 @@
     <title>Ramiro Dion De Biase | Proyectos</title>
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -21,7 +24,10 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo">Ramiro Dion De Biase</a>
+            <a href="index.html" class="logo">
+                <span class="logo-mark"><i class="fas fa-code"></i></span>
+                Ramiro Dion De Biase
+            </a>
             <button class="hamburger" aria-label="Menú de navegación" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
@@ -104,7 +110,7 @@
 
                         <!-- Descripción corta (siempre visible) -->
                         <p class="proyecto-descripcion-corta">
-                            Aplicacion nativa de android (en desarrollo)
+                            Aplicacion nativa de android (Actualmente en puebas cerradas pre-produccion)
                         </p>
 
                         <!-- Descripción larga (oculta hasta hacer clic) -->
@@ -299,6 +305,90 @@
                     </div>
 
                 </article>
+
+                <!-- ===== PROYECTO 5  ===== -->
+
+                <article class="proyecto-card animar-entrada">
+
+                    <div class="proyecto-video" id="contenedor-video-5">
+
+                        <video id="video-proyecto-5" poster="assets/images/GestionGym.png" loop>
+
+                            <source src="assets/videos/GrabacionGestionGym.webm" type="video/webm">
+
+                            Tu navegador no soporta el video.
+
+                        </video>
+
+                    </div>
+
+                    <div class="proyecto-info">
+
+                        <h3>Gestion GYM</h3>
+
+
+
+                        <!-- Descripción corta (siempre visible) -->
+
+                        <p class="proyecto-descripcion-corta">
+
+                            Un programa de gestion para GYM
+
+                        </p>
+
+
+
+                        <!-- Descripción larga (oculta hasta hacer clic) -->
+
+                        <div class="proyecto-descripcion-completa">
+
+                            <p>
+                                Este proyecto esta hecho a mano por mi en forma de practica usando java puro junto con javaFX para la UI, es un software bastante basico pensado para comercios chicos. Es un sistema que tuve que hacer en hora y media para un final, y lo modifique un pooc usando javaFX para que sea funcional y visualmente usable en Winodws, Linux y MAC
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- Botón Leer más -->
+
+                        <button class="btn-leer-mas" onclick="toggleDescripcion(event, this)">
+
+                            Leer más <i class="fas fa-chevron-down"></i>
+
+                        </button>
+
+
+
+                        <div class="tags">
+
+                            <span>Java</span><span>JavaFX</span>
+
+                        </div>
+
+                        <div class="proyecto-links">
+
+                            <a href="#"
+                                onclick="abrirDemoFullscreen('contenedor-video-5', 'video-proyecto-5'); return false;"
+                                class="link-demo">
+
+                                <i class="fas fa-external-link-alt"></i> Demo
+
+                            </a>
+
+                            <a href="https://github.com/Ramadion/Gestion-GYM" target="_blank" rel="noopener" class="link-repo">
+
+                                <i class="fab fa-github"></i> Repo
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
 
             </div>
 

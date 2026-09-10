@@ -14,6 +14,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <title>Ramiro Dion De Biase | Portfolio</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -21,7 +24,10 @@
 <body>
     <header>
         <nav>
-            <a href="#" class="logo">Ramiro Dion De Biase</a>
+            <a href="#" class="logo">
+                <span class="logo-mark"><i class="fas fa-code"></i></span>
+                Ramiro Dion De Biase
+            </a>
             <button class="hamburger" aria-label="Menú de navegación" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
@@ -37,33 +43,72 @@
     <main>
         <!-- HERO -->
         <section id="inicio">
-    <div class="hero-carousel">
-        <div class="carousel-slide active" style="background-image: url('assets/images/fondo1.png');"></div>
-        <div class="carousel-slide" style="background-image: url('assets/images/fondo2.png');"></div>
-    </div>
-    
-    <!-- Overlay oscuro -->
-    <div class="hero-overlay"></div>
-    
-    <!-- Degradado inferior para transición suave -->
-    <div class="hero-fade-bottom"></div>
+            <div class="hero-carousel">
+                <div class="carousel-slide active" style="background-image: url('assets/images/fondo1.png');"></div>
+                <div class="carousel-slide" style="background-image: url('assets/images/fondo2.png');"></div>
+            </div>
 
-    <canvas id="particles-canvas"></canvas>
-    
-    <div class="hero-content">
-        <h1>Hola, soy <span>Ramiro</span></h1>
-        <p class="subtitle">Desarrollador</p>
-        <p>Construyo cosas para la web</p>
-        <div class="hero-buttons">
-            <a href="proyectos.html" class="btn">Ver Proyectos</a>
-            <a href="#contacto" class="btn btn-outline">Contáctame</a>
-        </div>
-    </div>
-</section>
+            <div class="hero-overlay"></div>
+            <div class="orbs">
+                <span class="orb orb-1"></span>
+                <span class="orb orb-2"></span>
+                <span class="orb orb-3"></span>
+            </div>
+            <div class="hero-fade-bottom"></div>
+
+            <canvas id="particles-canvas"></canvas>
+
+            <div class="hero-content">
+                <span class="hero-badge"><span class="dot"></span> Disponible para trabajar</span>
+                <h1>Hola, soy <span class="gradiente-texto">Ramiro</span></h1>
+                <p class="subtitle">Desarrollador Full-Stack</p>
+                <p class="tagline">Construyo cosas para la web y el móvil, de la idea a producción.</p>
+                <div class="hero-buttons">
+                    <a href="proyectos.html" class="btn"><i class="fas fa-rocket"></i> Ver Proyectos</a>
+                    <a href="#contacto" class="btn btn-outline">Contáctame</a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/Ramadion" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ramiro-de-biase-b14a0729a/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:ramirodebiase@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/5492267538964" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span class="mouse"></span>
+                <span>Deslizá</span>
+            </div>
+        </section>
+
+        <!-- STATS -->
+        <section id="stats">
+            <div class="stats-grid">
+                <div class="stat-item animar-entrada">
+                    <div class="stat-num" data-target="5">0</div>
+                    <div class="stat-label">Proyectos destacados</div>
+                </div>
+                <div class="stat-item animar-entrada">
+                    <div class="stat-num" data-target="15" data-sufijo="+">0</div>
+                    <div class="stat-label">Tecnologías</div>
+                </div>
+                <div class="stat-item animar-entrada">
+                    <div class="stat-num" data-target="3" data-sufijo="+">0</div>
+                    <div class="stat-label">Años de experiencia</div>
+                </div>
+                <div class="stat-item animar-entrada">
+                    <div class="stat-num" data-target="100" data-sufijo="%">0</div>
+                    <div class="stat-label">Compromiso</div>
+                </div>
+            </div>
+        </section>
 
         <!-- SOBRE MÍ -->
         <section id="sobre-mi" class="animar-entrada">
-            <h2>Sobre mí</h2>
+            <div class="seccion-cabecera">
+                <span class="seccion-etiqueta">Quién soy</span>
+                <h2>Sobre mí</h2>
+            </div>
             <div class="sobre-mi-content">
                 <img src="assets/images/foto_perfil.png" alt="Foto de perfil" class="perfil-img">
                 <div class="sobre-mi-texto">
@@ -96,14 +141,17 @@
                         <li>Supabase</li>
                         <li>SQL</li>
                     </ul>
-                    <a href="#" class="btn" id="descargar-cv">Descargar CV</a>
+                    <a href="#" class="btn" id="descargar-cv"><i class="fas fa-download"></i> Descargar CV</a>
                 </div>
             </div>
         </section>
 
         <!-- EXPERIENCIA -->
         <section id="experiencia" class="animar-entrada">
-            <h2>Experiencia</h2>
+            <div class="seccion-cabecera">
+                <span class="seccion-etiqueta">Trayectoria</span>
+                <h2>Experiencia</h2>
+            </div>
             <div class="timeline">
                 <div class="timeline-item">
                     <h3>Desarrollador Freelance</h3>
@@ -123,7 +171,10 @@
 
         <!-- EDUCACIÓN -->
         <section id="educacion" class="animar-entrada">
-            <h2>Educación</h2>
+            <div class="seccion-cabecera">
+                <span class="seccion-etiqueta">Formación</span>
+                <h2>Educación</h2>
+            </div>
             <div class="educacion-grid">
                 <div class="educacion-card">
                     <h3>Licenciatura en Sistemas</h3>
@@ -150,7 +201,10 @@
 
         <!-- SKILLS -->
         <section id="skills" class="animar-entrada">
-            <h2>Skills</h2>
+            <div class="seccion-cabecera">
+                <span class="seccion-etiqueta">Habilidades</span>
+                <h2>Skills</h2>
+            </div>
 
             <div class="skills-categoria">
                 <h3>Frontend</h3>
@@ -219,38 +273,62 @@
             </div>
         </section>
 
+        <!-- MARQUEE DE TECNOLOGÍAS -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span><i class="fab fa-android"></i>Android</span>
+                <span><i class="fab fa-react"></i>React</span>
+                <span><i class="fab fa-js"></i>JavaScript</span>
+                <span><i class="fab fa-java"></i>Java</span>
+                <span><i class="fab fa-python"></i>Python</span>
+                <span><i class="fab fa-node-js"></i>Node.js</span>
+                <span><i class="fab fa-git-alt"></i>Git</span>
+                <span><i class="fab fa-linux"></i>Linux</span>
+                <span><i class="fas fa-database"></i>SQL</span>
+                <span><i class="fab fa-google"></i>Firebase</span>
+            </div>
+        </div>
+
         <!-- CONTACTO -->
         <section id="contacto" class="animar-entrada">
-            <h2>Contacto</h2>
+            <div class="seccion-cabecera">
+                <span class="seccion-etiqueta">Hablemos</span>
+                <h2>Contacto</h2>
+            </div>
             <p>¿Tenés un proyecto en mente? ¡Hablemos!</p>
 
             <div class="contacto-wrapper">
-            <form class="contacto-form" action="https://formspree.io/f/xwvjpppd" method="POST">
-                <input type="text" name="nombre" placeholder="Tu nombre" required>
-                <input type="email" name="email" placeholder="Tu email" required>
-                <input type="text" name="asunto" placeholder="Asunto">
-                <textarea name="mensaje" placeholder="Tu mensaje..." required></textarea>
-                <button type="submit" class="btn">Enviar mensaje</button>
-                <div class="form-feedback"></div>
-            </form>
+                <form class="contacto-form" action="https://formspree.io/f/xwvjpppd" method="POST">
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="email" name="email" placeholder="Tu email" required>
+                    <input type="text" name="asunto" placeholder="Asunto">
+                    <textarea name="mensaje" placeholder="Tu mensaje..." required></textarea>
+                    <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Enviar mensaje</button>
+                    <div class="form-feedback"></div>
+                </form>
 
-            <div class="contacto-links">
-                <a href="mailto:ramirodebiase@hotmail.com"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://wa.me/5492267538964?text=Hola%20Ramiro%2C%20vi%20tu%20portfolio%20y%20quer%C3%ADa%20contactarte"
-                    target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-                <a href="https://github.com/Ramadion" target="_blank" rel="noopener"><i class="fab fa-github"></i>
-                    GitHub</a>
-                <a href="https://www.linkedin.com/in/ramiro-de-biase-b14a0729a/" target="_blank" rel="noopener"><i
-                        class="fab fa-linkedin"></i> LinkedIn</a>
-            </div>
+                <div class="contacto-links">
+                    <a href="mailto:ramirodebiase@hotmail.com"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://wa.me/5492267538964?text=Hola%20Ramiro%2C%20vi%20tu%20portfolio%20y%20quer%C3%ADa%20contactarte"
+                        target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="https://github.com/Ramadion" target="_blank" rel="noopener"><i class="fab fa-github"></i>
+                        GitHub</a>
+                    <a href="https://www.linkedin.com/in/ramiro-de-biase-b14a0729a/" target="_blank" rel="noopener"><i
+                            class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 Ramiro Dion De Biase. Hecho con ❤️ </p>
+        <div class="footer-links">
+            <a href="https://github.com/Ramadion" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ramiro-de-biase-b14a0729a/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:ramirodebiase@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>© 2026 Ramiro Dion De Biase. Hecho con <span style="color: #ff4d6d;">❤</span></p>
     </footer>
 
     <script src="js/main.js"></script>
